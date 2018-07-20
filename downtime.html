@@ -1,0 +1,163 @@
+<!doctype html>
+<html class=no-js lang=en dir=ltr>
+
+<head>
+	<meta charset=utf-8>
+	<meta http-equiv=x-ua-compatible content="ie=edge">
+	<meta name=viewport content="width=device-width, initial-scale=1.0">
+	<title>ePLDT Web Builder</title>
+	<link rel="shortcut icon" href="/img/epldt.ico">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel=stylesheet href="css/foundation.css">
+	<link rel=stylesheet href="css/motion-ui.min.css">
+	<link rel=stylesheet href="css/font-awesome.css">
+	<link rel=stylesheet href="css/jquery.bxslider.css" />
+	<link rel=stylesheet href="css/lity.css" rel=stylesheet>
+	<link rel=stylesheet href="css/app.css">
+</head>
+
+<body>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BLGTKB" height=0 width=0 style="display:none;visibility:hidden"></iframe></noscript>
+	<header class="large">
+		<div class="row">
+			<nav class="large-12 columns">
+				<a href="http://webbuilder.epldt.com/"><img class="header-logo animated fadeIn delay-07s" src="img/logo.png"></a>
+				<ul class="menu title-bar-left hide-for-small-only">
+					<li><a href="#fold-3">Features</a></li>
+					<li><a href="#fold-6">Pricing</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+				</ul>
+				<ul class="menu title-bar-right ">
+					<li class="sign-in"><a href="http://webbuilder.epldt.com/signin.html">Sign In</a></li>
+					<li class="get-started outline"><a href="http://webbuilder.epldt.com/getstarted.html">Try Web Builder for Free</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<section id="fold-6">
+	<div class="wrapper-message" style="margin-top">
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="section-title">
+					<img src="img/under-maintenance.png" alt="" width="200" style="margin: 2em auto;">
+					<h3>We'll be back very soon.</h3>
+					<p>We are currently performing system upgrades to serve you better. We'll be back up and running again before long, brso please try again soon.</p>
+					<p>In the meantime, you may contact our Product Manager at <a href="mailto:kddaquioag@epldt.com">kddaquioag@epldt.com</a> if you have questions. Our support lines are also available to accommodate your needs at <a href="mailto:wecare@epldt.com">wecare@epldt.com</a>.</p>
+					<p>Thanks for your usual support and understanding!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+ </section>
+
+
+
+	<footer>
+		<section id=contact>
+			<div class="row ">
+				<div class="large-3 medium-3 small-12 columns">
+					<h4>CONTACT US</h4>
+				</div>
+				<div class="large-3 medium-3 small-12 columns">
+					<ul>
+						<li><img src="img/email.png"></li>
+						<li>
+							<h6>EMAIL</h6>
+							<a href="mailto:wecare@epldt.com">wecare@epldt.com</a></li>
+					</ul>
+				</div>
+				<div class="large-3 medium-3 small-12 columns">
+					<ul>
+						<li><img src="img/phone.png"></li>
+						<li>
+							<h6>LANDLINE</h6>
+							<a href="#">#ePLDT (#37538)</a></li>
+					</ul>
+				</div>
+				<div class="large-3 medium-3 small-12 columns">
+					<ul>
+						<li><img src="img/phone.png"></li>
+						<li>
+							<h6>LANDLINE</h6>
+							<a href="#">2888999</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class=copyright>
+			<div class=row>
+				<div class="large-12 columns">
+					<p>Copyright &#169; 2017. <a href="http://www.epldt.com/" target=_blank>ePLDT Inc.</a> All rights reserved.</p>
+				</div>
+				<div class="large-12 columns">
+					<span><a href="http://webbuilder.epldt.com/privacy.html">Privacy Policy </a> &#8226; <a href="http://webbuilder.epldt.com/terms.html"> Terms and Conditions</a></span>
+				</div>
+			</div>
+			</div>
+		</section>
+	</footer>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/lity.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script>
+		$(document).on("scroll", function() {
+			if ($(document).scrollTop() > 100) {
+				$("header").removeClass("large").addClass("small");
+			} else {
+				$("header").removeClass("small").addClass("large");
+			}
+		});
+
+		$(document).ready(function() {
+			$('a[href^="#"]').on('click', function(e) {
+				e.preventDefault();
+
+				var target = this.hash;
+				$target = $(target);
+
+				$('html, body').stop().animate({
+					'scrollTop': $target.offset().top
+				}, 900, 'swing', function() {
+					window.location.hash = target;
+				});
+			});
+		});
+
+		$("#flip").click(function() {
+			$("#panel").slideToggle("slow");
+			if ($.trim($(this).text()) === 'LEARN MORE') {
+				$(this).html('Hide Details <i class="fa fa-angle-up"></i>');
+				//  $(this).addClass('custom-font');
+			} else {
+				$(this).html('LEARN MORE <i class="fa fa-angle-down"></i>');
+			}
+		});
+
+		$('.bxslider').bxSlider({
+			mode: 'horizontal',
+			captions: true,
+			pause: 8000,
+			speed: 10000
+		});
+
+	</script>
+	<script type="text/javascript">
+		//<![CDATA[
+		(function() {
+			var _analytics_scr = document.createElement('script');
+			_analytics_scr.type = 'text/javascript';
+			_analytics_scr.async = true;
+			_analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+			var _analytics_elem = document.getElementsByTagName('script')[0];
+			_analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+		})();
+		// ]]>
+	</script>
+</body>
+
+</html>
